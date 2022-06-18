@@ -1,9 +1,15 @@
 <script>
   import Header from "./components/Header.svelte";
+  import SideDrawer from "./components/SideDrawer/SideDrawer.svelte";
+
+  let isMenuOpen = false;
 </script>
 
 <main>
-  <Header />
+  <Header bind:isMenuOpen />
+  {#if isMenuOpen}
+    <SideDrawer />
+  {/if}
 </main>
 
 <!-- we are going to use global style variables this time -->
@@ -14,6 +20,7 @@
   main {
     width: 23.4375rem;
     margin: 0 auto;
+    position: relative;
     /* temporary for mobile dev first */
   }
 </style>
