@@ -1,3 +1,6 @@
+//A reverse engineer job of the slide found in the svelte source code
+//in order to slide from right to left as opposed to top to bottom.
+
 import { cubicOut } from "svelte/easing";
 
 export default function slideRtoL(
