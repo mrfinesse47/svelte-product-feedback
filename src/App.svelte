@@ -16,6 +16,7 @@
 <style>
   :global(:root) {
     --header-color: purple;
+    --background-color: #f7f8fd;
   }
   main {
     width: 23.4375rem;

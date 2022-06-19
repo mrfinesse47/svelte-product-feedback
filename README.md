@@ -1,107 +1,111 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework and don't mind using pre-1.0 software — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+# Frontend Mentor - Product feedback app
 
----
+![Design preview for the Product feedback app coding challenge](./preview.jpg)
 
-# svelte app
+## Welcome! 👋
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+**To do this challenge, you need a strong understanding of HTML, CSS, and JavaScript.**
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+## The challenge
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+Your challenge is to build out this product feedback application and get it looking as close to the design as possible.
 
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-## Get started
+We provide the data in a local `data.json` file, so use that to populate the content on the first load. If you want to take it up a notch, feel free to build this as a full-stack application!
 
-Install the dependencies...
+Your users should be able to:
 
-```bash
-cd svelte-app
-npm install
-```
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Create, read, update, and delete product feedback requests
+- Receive form validations when trying to create/edit feedback requests
+- Sort suggestions by most/least upvotes and most/least comments
+- Filter suggestions by category
+- Add comments and replies to a product feedback request
+- Upvote product feedback requests
+- **Bonus**: Keep track of any changes, even after refreshing the browser (`localStorage` could be used for this if you're not building out a full-stack app)
 
-...then start [Rollup](https://rollupjs.org):
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-```bash
-npm run dev
-```
+### Expected Behaviour
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+- Suggestions page
+  - Only product feedback requests with a status of `suggestion` should be shown on the Suggestions page.
+- Roadmap
+  - Feedback requests with a status of `planned`, `in-progress`, or `live` should show up on the roadmap, and should be placed in the correct column based on their status.
+  - Columns should be ordered by upvote totals.
+- Creating a product request
+  - When creating a new piece of feedback, an ID needs to be assigned which increments the current highest product request ID by 1.
+  - The default status for a new piece of feedback is `suggestion`. This places it on the Suggestions page.
+- Editing feedback
+  - If a piece of feedback has its status updated to `planned`/`in-progress`/`live` it moves through to the roadmap and should show up in the correct column based on its new status.
+- Add comments/replies
+  - Use the data from the `currentUser` object in the `data.json` file to populate the user data for any new comments or replies.
+  - Any comment/reply can have a maximum of 250 characters.
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+## Where to find everything
 
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
+Your task is to build out the project to the design file provided. We provide both Sketch and Figma versions of the design, so you can choose which tool you prefer to use. You can download the design file on the platform. **Please be sure not to share them with anyone else.** The design download comes with a `README.md` file as well to help you get set up.
 
-## Building and running in production mode
+All the required assets for this project are in the `/assets` folder. The assets are already exported for the correct screen size and optimized. Some images are reusable at multiple screen sizes. So if you don't see an image in a specific folder, it will typically be in another folder for that page.
 
-To create an optimised version of the app:
+The design system in the design file will give you more information about the various colors, fonts, and styles used in this project.
 
-```bash
-npm run build
-```
+## Building your project
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
 
+1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/). **⚠️ IMPORTANT ⚠️: There are already a couple of `.gitignore` files in this project. Please do not remove them or change the content of the files. If you create a brand new project, please use the `.gitignore` files provided in your new codebase. This is to avoid the accidental upload of the design files to GitHub. With these premium challenges, please be sure not to share the design files in your GitHub repo. Thanks!**
+2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
+3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
+4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
+5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
+6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-## Single-page app mode
+## Deploying your project
 
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
+As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
 
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
+- [GitHub Pages](https://pages.github.com/)
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
 
-```js
-"start": "sirv public --single"
-```
+You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-## Using TypeScript
+## Create a custom `README.md`
 
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
+We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
 
-```bash
-node scripts/setupTypeScript.js
-```
+The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
 
-Or remove the script via:
+Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
-```bash
-rm scripts/setupTypeScript.js
-```
+## Submitting your solution
 
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
+Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
 
-## Deploying to the web
+Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
 
-### With [Vercel](https://vercel.com)
+**⚠️ IMPORTANT ⚠️: With these premium challenges, please be sure not to upload the design files to GitHub when you're submitting to the platform and sharing it around. If you've created a brand new project, the easiest way to do that is to copy across the `.gitignore` provided in this starter project.**
 
-Install `vercel` if you haven't already:
+## Sharing your solution
 
-```bash
-npm install -g vercel
-```
+There are multiple places you can share your solution:
 
-Then, from within your project folder:
+1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack).
+2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
+3. Share your solution on other social channels like LinkedIn.
+4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-```bash
-cd public
-vercel deploy --name my-project
-```
+We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
 
-### With [surge](https://surge.sh/)
+The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 
-Install `surge` if you haven't already:
+## Got feedback for us?
 
-```bash
-npm install -g surge
-```
+We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
 
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+**Have fun building!** 🚀
