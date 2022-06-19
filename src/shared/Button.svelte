@@ -1,11 +1,11 @@
 <script>
   export let type = "primary";
-  export let flat = false;
+  //   export let flat = false;
   export let inverse = false;
   //flat and inverse are shorthand  -- see https://svelte.dev/tutorial/class-shorthand
 </script>
 
-<button class={type} class:flat class:inverse on:click><slot /></button>
+<button class={type} class:inverse on:click><slot /></button>
 
 <style>
   button {
@@ -16,26 +16,19 @@
     font-weight: 600;
     font-size: 0.8125rem;
     line-height: 1.1875rem;
-    color: #ffffff;
     border-radius: 0.625rem;
+    padding: 0.3125rem 1rem 0.375rem;
   }
   .primary {
-    background-color: #f2f4ff;
-    color: #4661e6;
-  }
-  .secondary {
-    background-color: #45c496;
+    background-color: var(--primary-color);
     color: white;
   }
+
   .flat {
     box-shadow: none;
   }
   .primary.inverse {
-    background-color: white;
-    color: #d91b42;
-  }
-  .secondary.inverse {
-    background-color: white;
-    color: #45c496;
+    background-color: var(--primary-inverse-color);
+    color: var(--primary-color);
   }
 </style>

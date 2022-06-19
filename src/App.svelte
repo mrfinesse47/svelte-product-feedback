@@ -15,6 +15,8 @@
 <!-- we are going to use global style variables this time -->
 <style>
   :global(:root) {
+    --primary-color: #4661e6;
+    --primary-inverse-color: #f2f4ff;
     --header-color: purple;
     --background-color: #f7f8fd;
   }
