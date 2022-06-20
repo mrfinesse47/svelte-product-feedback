@@ -15,8 +15,8 @@
   .container {
     background-color: #ffffff;
     margin: 1.5rem;
-    padding: 1.5rem 18px 22px 24px;
+    padding: 1.5rem 1.125rem 1.375rem 1.5rem;
     border-radius: 0.625rem;
-    width: 182px;
+    width: 11.375rem;
   }
 </style>

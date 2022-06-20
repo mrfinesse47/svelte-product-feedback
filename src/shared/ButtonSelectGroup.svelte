@@ -5,12 +5,12 @@
 <div class="container">
   <!-- thinking of these generating dynamic based on data -->
 
-  <Button>All</Button>
-  <Button inverse>UI</Button>
-  <Button inverse>UX</Button>
-  <Button inverse>Enhancement</Button>
-  <Button inverse>Bug</Button>
-  <Button inverse>Feature</Button>
+  <Button selected>All</Button>
+  <Button>UI</Button>
+  <Button>UX</Button>
+  <Button>Enhancement</Button>
+  <Button>Bug</Button>
+  <Button>Feature</Button>
 </div>
 
 <style>

@@ -29,28 +29,32 @@
     color: #ffffff;
   }
   h1 {
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: -0.1875px;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    letter-spacing: -0.0117rem;
   }
   h3 {
     font-weight: 500;
-    font-size: 13px;
-    line-height: 19px;
+    font-size: 0.8125rem;
+    line-height: 1.1875rem;
     mix-blend-mode: normal;
     opacity: 0.75;
   }
   .title {
-    margin-top: 16px;
-    margin-left: 24px;
-    margin-bottom: 15px;
-    width: 115px;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0.9375rem;
+    width: 7.1875rem;
   }
   .hamburger-menu {
     align-self: center;
-    margin-right: 24px;
+    margin-right: 1.5rem;
   }
   .hamburger-menu:hover {
     cursor: pointer;
+  }
+  img {
+    width: 1.25rem;
+    height: 1.0625rem;
   }
 </style>
