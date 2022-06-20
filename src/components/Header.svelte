@@ -1,5 +1,12 @@
 <script>
   export let isMenuOpen;
+  function handleEnterPress({ keyCode }) {
+    if (keyCode === 13) {
+      //this could be a cb
+      isMenuOpen = !isMenuOpen;
+      //
+    }
+  }
 </script>
 
 <header>
@@ -7,13 +14,19 @@
     <h1>Frontend Mentor</h1>
     <h3>Feedback Board</h3>
   </div>
-  <div class="hamburger-menu" tabindex="0">
+  <div
+    class="hamburger-menu"
+    tabindex="0"
+    on:click={() => {
+      isMenuOpen = !isMenuOpen;
+    }}
+    on:keydown={(e) => handleEnterPress(e)}
+  >
     <img
-      src="./assets/shared/mobile/icon-hamburger.svg"
-      alt="open menu"
-      on:click={() => {
-        isMenuOpen = !isMenuOpen;
-      }}
+      src={`./assets/shared/mobile/icon-${
+        isMenuOpen ? "close" : "hamburger"
+      }.svg`}
+      alt={`${isMenuOpen ? "close" : "open"} menu`}
     />
   </div>
 </header>

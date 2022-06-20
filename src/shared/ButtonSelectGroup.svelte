@@ -2,7 +2,7 @@
   import Button from "./Button.svelte";
 </script>
 
-<div class="container">
+<div class="container" aria-label="category filter">
   <!-- thinking of these generating dynamic based on data -->
 
   <Button selected>All</Button>
