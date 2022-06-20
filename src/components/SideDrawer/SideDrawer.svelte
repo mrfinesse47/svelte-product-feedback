@@ -2,13 +2,16 @@
   import slideRtoL from "../../transitions/slideRtoL";
   import FadingContainer from "./FadingContainer.svelte";
   import ButtonSelectGroup from "../../shared/ButtonSelectGroup.svelte";
+  import RoadmapWidget from "./RoadmapWidget.svelte";
 </script>
 
 <nav transition:slideRtoL>
   <FadingContainer>
     <ButtonSelectGroup />
   </FadingContainer>
-  <FadingContainer />
+  <FadingContainer>
+    <RoadmapWidget />
+  </FadingContainer>
 </nav>
 
 <style>
