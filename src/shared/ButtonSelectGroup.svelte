@@ -12,3 +12,10 @@
   <Button inverse>Bug</Button>
   <Button inverse>Feature</Button>
 </div>
+
+<style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>

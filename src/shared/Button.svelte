@@ -9,6 +9,7 @@
 
 <style>
   button {
+    display: block;
     border: 0;
     cursor: pointer;
     font-family: "Jost";
@@ -18,6 +19,8 @@
     line-height: 1.1875rem;
     border-radius: 0.625rem;
     padding: 0.3125rem 1rem 0.375rem;
+    margin-right: 8px;
+    margin-bottom: 0.875rem;
   }
   .primary {
     background-color: var(--primary-color);

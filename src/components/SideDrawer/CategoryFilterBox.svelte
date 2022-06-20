@@ -14,5 +14,9 @@
 <style>
   .container {
     background-color: #ffffff;
+    margin: 1.5rem;
+    padding: 1.5rem 18px 22px 24px;
+    border-radius: 0.625rem;
+    width: 182px;
   }
 </style>
