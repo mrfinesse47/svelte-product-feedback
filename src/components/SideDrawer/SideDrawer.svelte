@@ -1,10 +1,14 @@
 <script>
   import slideRtoL from "../../transitions/slideRtoL";
-  import CategoryFilterBox from "./CategoryFilterBox.svelte";
+  import FadingContainer from "./FadingContainer.svelte";
+  import ButtonSelectGroup from "../../shared/ButtonSelectGroup.svelte";
 </script>
 
 <nav transition:slideRtoL>
-  <CategoryFilterBox />
+  <FadingContainer>
+    <ButtonSelectGroup />
+  </FadingContainer>
+  <FadingContainer />
 </nav>
 
 <style>
