@@ -3,8 +3,15 @@
   import SideDrawer from "./components/SideDrawer/SideDrawer.svelte";
 
   let isMenuOpen = false;
+
+  function handleWindowEsc({ keyCode }) {
+    if (keyCode === 27) {
+      isMenuOpen = !isMenuOpen;
+    }
+  }
 </script>
 
+<svelte:window on:keydown={(e) => handleWindowEsc(e)} />
 <main>
   <Header bind:isMenuOpen />
   {#if isMenuOpen}
