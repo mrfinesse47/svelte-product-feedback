@@ -1,10 +1,12 @@
 <script>
   import Header from "./components/Header.svelte";
   import SideDrawer from "./components/SideDrawer/SideDrawer.svelte";
+  import ProductRequestList from "./components/ProductRequests/ProductRequestList.svelte";
 
   let isMenuOpen = false;
 
   function handleWindowEsc({ keyCode }) {
+    //escape key to close side drawer
     if (keyCode === 27) {
       isMenuOpen = !isMenuOpen;
     }
@@ -17,6 +19,7 @@
   {#if isMenuOpen}
     <SideDrawer />
   {/if}
+  <ProductRequestList />
 </main>
 
 <!-- we are going to use global style variables this time -->
