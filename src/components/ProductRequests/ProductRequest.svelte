@@ -1,4 +1,5 @@
 <script>
+  import FilterBar from "./FilterBar/FilterBar.svelte";
 </script>
 
-<li>test</li>
+<FilterBar />

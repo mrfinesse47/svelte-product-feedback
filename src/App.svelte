@@ -8,7 +8,7 @@
   function handleWindowEsc({ keyCode }) {
     //escape key to close side drawer
     if (keyCode === 27) {
-      isMenuOpen = !isMenuOpen;
+      isMenuOpen = false;
     }
   }
 </script>
@@ -27,7 +27,10 @@
   :global(:root) {
     --primary-color: #4661e6;
     --primary-inverse-color: #f2f4ff;
-    --header-color: purple;
+    --light-grey: #f2f4fe;
+    --deep-purple: #373f68;
+
+    --bright-purple: #ad1fea;
     --background-color: #f7f8fd;
   }
   main {

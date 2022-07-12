@@ -3,7 +3,6 @@
   //   export let flat = false;
   export let textStyle = false;
   export let selected = false;
-  //flat and inverse are shorthand  -- see https://svelte.dev/tutorial/class-shorthand
 </script>
 
 <button class={type} class:selected class:textStyle on:click><slot /></button>

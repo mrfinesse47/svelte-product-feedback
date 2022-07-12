@@ -3,7 +3,7 @@
 </script>
 
 <header>
-  <h3>Roadmap</h3>
+  <h3 aria-label="Roadmap">Roadmap</h3>
   <Button
     textStyle
     on:click={() => {

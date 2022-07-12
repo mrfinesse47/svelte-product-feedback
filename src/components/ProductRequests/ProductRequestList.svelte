@@ -3,9 +3,7 @@
 </script>
 
 <div class="product-request-list">
-  <ul>
-    <ProductRequest />
-  </ul>
+  <ProductRequest />
 </div>
 
 <style>
