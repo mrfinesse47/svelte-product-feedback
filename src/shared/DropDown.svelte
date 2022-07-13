@@ -1,14 +1,20 @@
 <script>
+  import Arrow from "../icons/Arrow.svelte";
 </script>
 
 <div class="current-item">
   <h4><span class="light">Sort By:</span> Most Upvotes</h4>
-  <img src="../assets/shared/icon-arrow-down.svg" alt="" />
+  <Arrow />
 </div>
 
 <style>
   .current-item {
     background-color: var(--deep-purple);
+    display: flex;
+  }
+  .current-item img {
+    width: 10px;
+    height: 7px;
   }
   .current-item h4 {
     font-size: 0.8125rem;
