@@ -3,9 +3,12 @@
   //   export let flat = false;
   export let textStyle = false;
   export let selected = false;
+  export let large = false;
 </script>
 
-<button class={type} class:selected class:textStyle on:click><slot /></button>
+<button class={type} class:selected class:textStyle class:large on:click
+  ><slot /></button
+>
 
 <style>
   button {
@@ -26,6 +29,13 @@
     background-color: var(--primary-inverse-color);
     color: var(--primary-color);
   }
+  .bright-purple {
+    margin: 0;
+    padding: 0;
+    color: #f2f4fe;
+    background-color: var(--bright-purple);
+  }
+
   /* 
   .flat {
     box-shadow: none;
@@ -44,5 +54,9 @@
     border: 0;
     margin: 0;
     padding: 0;
+  }
+  .large {
+    font-weight: 700;
+    padding: 0.6563rem 1.0625rem 0.6563rem 1rem;
   }
 </style>

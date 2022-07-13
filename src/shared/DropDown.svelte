@@ -4,17 +4,15 @@
 
 <div class="current-item">
   <h4><span class="light">Sort By:</span> Most Upvotes</h4>
-  <Arrow />
+  <div class="arrow">
+    <Arrow />
+  </div>
 </div>
 
 <style>
   .current-item {
-    background-color: var(--deep-purple);
     display: flex;
-  }
-  .current-item img {
-    width: 10px;
-    height: 7px;
+    align-items: center;
   }
   .current-item h4 {
     font-size: 0.8125rem;
@@ -22,5 +20,8 @@
   }
   .current-item h4 .light {
     font-weight: 400;
+  }
+  .arrow {
+    padding-left: 0.5rem;
   }
 </style>
