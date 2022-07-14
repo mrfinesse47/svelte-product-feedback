@@ -1,7 +1,7 @@
 <script>
   import Button from "../../shared/Button.svelte";
   import UpVoteButton from "../../shared/UpVoteButton.svelte";
-  import Comment from "../../icons/Comment.svelte";
+  import CommentCounter from "../../shared/CommentCounter.svelte";
 </script>
 
 <li>
@@ -10,7 +10,7 @@
   <Button noClick>test</Button>
   <footer>
     <UpVoteButton count={112} />
-    <Comment />
+    <CommentCounter count={100} />
   </footer>
 </li>
 
@@ -18,6 +18,7 @@
   li {
     background-color: white;
     width: 20.4375rem;
+    margin: 1rem auto;
   }
   footer {
     display: flex;

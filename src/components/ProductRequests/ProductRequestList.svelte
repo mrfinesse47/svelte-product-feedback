@@ -7,6 +7,9 @@
   <FilterBar />
   <ul>
     <ProductRequest />
+    <ProductRequest />
+    <ProductRequest />
+    <ProductRequest />
   </ul>
 </div>
 

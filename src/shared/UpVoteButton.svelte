@@ -30,6 +30,6 @@
     padding-right: 0.625rem;
   }
   .text {
-    color: #3a4374;
+    color: var(--dark-text);
   }
 </style>

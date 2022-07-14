@@ -29,7 +29,7 @@
     --primary-inverse-color: #f2f4ff;
     --light-grey: #f2f4fe;
     --deep-purple: #373f68;
-
+    --dark-text: #3a4374;
     --bright-purple: #ad1fea;
     --background-color: #f7f8fd;
   }
