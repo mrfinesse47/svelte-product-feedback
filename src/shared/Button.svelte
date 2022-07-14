@@ -1,13 +1,18 @@
 <script>
   export let type = "primary";
-  //   export let flat = false;
   export let textStyle = false;
   export let selected = false;
   export let large = false;
+  export let noClick = false;
 </script>
 
-<button class={type} class:selected class:textStyle class:large on:click
-  ><slot /></button
+<button
+  class={type}
+  class:noClick
+  class:selected
+  class:textStyle
+  class:large
+  on:click><slot /></button
 >
 
 <style>
@@ -36,10 +41,6 @@
     background-color: var(--bright-purple);
   }
 
-  /* 
-  .flat {
-    box-shadow: none;
-  } */
   .primary.selected {
     background-color: var(--primary-color);
     color: white;
@@ -58,5 +59,9 @@
   .large {
     font-weight: 700;
     padding: 0.6563rem 1.0625rem 0.6563rem 1rem;
+  }
+  .noClick {
+    pointer-events: none;
+    cursor: none;
   }
 </style>
